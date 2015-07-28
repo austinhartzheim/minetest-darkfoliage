@@ -23,12 +23,3 @@ plantslib:spawn_on_surfaces({
 	near_nodes = {"darkfoliage:blackgrass"},
 	near_nodes_size = 3,
 })
-
-minetest.register_abm({
-	nodenames = {"darkfoliage:blackgrass"},
-	interval = 10,
-	chance = 30,
-	action = function(pos)
-		minetest.remove_node(pos)
-	end,
-})
