@@ -1,11 +1,11 @@
 minetest.register_node("darkfoliage:blackgrass", {
-	description = "Black Vine",
+	description = "Black Grass",
 	drawtype = "plantlike",
 	waving = 1,
 	is_ground_content = true,
 	walkable = true,
 	tiles = {"overgrowth_blackvine.png"},
-	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=3, flamable=5,flora=1, attached_node=1},
+	groups = {snappy=2, choppy=2, oddly_breakable_by_hand=3, flamable=3, flora=1, attached_node=1},
 	selection_box = {
 		type = "fixed",
 		fixed = {-0.5, -0.5, -0.5, 0.5, -5/16, 0.5},
@@ -14,12 +14,21 @@ minetest.register_node("darkfoliage:blackgrass", {
 
 plantslib:spawn_on_surfaces({
 	spawn_plants = {"darkfoliage:blackgrass"},
-	spawn_delay = 1000,
+	spawn_delay = 90,
 	avoid_nodes = {"default:water"},
 	avoid_radius = 10,
-	spawn_chance = 1,
-	light_max = 11,
+	spawn_chance = 10,
+	light_max = 9,
 	spawn_surfaces = {"default:dirt_with_grass"},
 	near_nodes = {"darkfoliage:blackgrass"},
 	near_nodes_size = 3,
+})
+
+minetest.register_abm({
+	nodenames = {"darkfoliage:blackgrass"},
+	interval = 150,
+	chance = 33,
+	action = function(pos)
+		minetest.remove_node(pos)
+	end,
 })
