@@ -17,7 +17,7 @@ plantslib:spawn_on_surfaces({
 	spawn_delay = 90,
 	avoid_nodes = {"default:water"},
 	avoid_radius = 10,
-	spawn_chance = 10,
+	spawn_chance = 7,
 	light_max = 9,
 	spawn_surfaces = {"default:dirt_with_grass"},
 	near_nodes = {"darkfoliage:blackgrass"},
