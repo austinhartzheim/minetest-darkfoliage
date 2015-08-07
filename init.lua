@@ -22,14 +22,14 @@ plantslib:spawn_on_surfaces({
 	spawn_surfaces = {"default:dirt_with_grass"},
 	near_nodes = {"darkfoliage:blackgrass"},
 	near_nodes_size = 3,
-	near_nodes_count = 2,
+	near_nodes_count = 3,
 	near_nodes_vertical = 2
 })
 
 minetest.register_abm({
 	nodenames = {"darkfoliage:blackgrass"},
-	interval = 150,
-	chance = 33,
+	interval = 100,
+	chance = 10, -- 10%
 	action = function(pos)
 		minetest.remove_node(pos)
 	end,
