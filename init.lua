@@ -22,6 +22,8 @@ plantslib:spawn_on_surfaces({
 	spawn_surfaces = {"default:dirt_with_grass"},
 	near_nodes = {"darkfoliage:blackgrass"},
 	near_nodes_size = 3,
+	near_nodes_count = 2,
+	near_nodes_vertical = 2
 })
 
 minetest.register_abm({
